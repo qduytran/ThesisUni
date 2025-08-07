@@ -3,7 +3,7 @@
 
 This repository is where the code for my full-time university graduation thesis is stored, my topic is related to **methods of processing EEG signals**, specifically the analysis of **physiological information** in the frequency domain.
 
-**Improving the Estimation of the 1/f Component in EEG Power Spectrum Parameterization for Alzheimer's Disease Diagnosis** [[``Click this’]]( https://drive.google.com/drive/folders/1A7miuQuSXcl0xZv36eetDHszSRXDuPvf?usp=sharing) 
+**Improving the Estimation of the 1/f Component in EEG Power Spectrum Parameterization for Alzheimer's Disease Diagnosis** [[`Click this`]( https://drive.google.com/drive/folders/1A7miuQuSXcl0xZv36eetDHszSRXDuPvf?usp=sharing)]
 <p align="center">
   <img src="assets/workflow.png" alt="Workflow" />
 </p>
