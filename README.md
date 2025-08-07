@@ -17,13 +17,18 @@ Besides, you need to install libraries such as **mne, scipy** to process EEG sig
 
 ## Quick Start
 This thesis works in the spectral domain. You should calculate the spectral first through power spectrum density estimation method by the file `welch.py`. Using python documents or matlab command `doc pwelch` to check it’s code and tutorials.
+
+Prior to applying the ``FOOOF`` spectral decomposition method, specifically to separate the periodic (``oscillatory peaks``) and aperiodic (``1/f`` component) components, we performed a flat spectrum analysis in the frequency range of ``0`` to ``50`` Hz to determine the appropriate frequency range for model fitting and spectral estimation. 
+
 Then, using the main function to run workflow followed by **overview** picture:
 ```
 python main.py
 ```
 
-## Parameter settings
+It is recommended to adjust the data paths to align with the current working environment. The main function generates `.csv` files corresponding to each data group, which are later employed for tasks such as model estimation, classification, and further analytical procedures.
 
+## Parameter settings
+Note that the parameters should be adjusted according to your specific dataset. In our implementation, different sets of parameters are configured for each step illustrated in the **overview** figure.
 
 ## Results
 
