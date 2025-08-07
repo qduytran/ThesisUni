@@ -16,7 +16,7 @@ Besides, you need to install libraries such as **mne, scipy** to process EEG sig
 
 ## Quick Start
 This thesis works in the spectral domain. You should calculate the spectral first through power spectrum density estimation method by the file `welch.py`. Using python documents or matlab command `doc pwelch` to check it’s code and tutorials.
-Then, using the main function to run workflow follow by **overview** picture:
+Then, using the main function to run workflow followed by **overview** picture:
 ```
 python main.py
 ```
