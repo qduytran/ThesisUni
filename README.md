@@ -30,8 +30,36 @@ It is recommended to adjust the data paths to align with the current working env
 ## Parameter settings
 Note that the parameters should be adjusted according to your specific dataset. In our implementation, different sets of parameters are configured for each step illustrated in the **overview** figure.
 
-## Results
+### Welch Method
 
+For power spectral estimation using the Welch method, we used the following configuration:
+
+- **Window type:** Hamming  
+- **Window length:** 256  
+- **FFT points:** 1024  
+- **Overlap:** 50%  
+- **Sampling frequency:** 250 Hz  
+
+---
+
+### FOOOF-Based Spectral Decomposition
+
+We applied two separate parameter sets for the estimation of **periodic** and **aperiodic** components using the FOOOF algorithm:
+
+| Component   | Peak Width Limits | Max Number of Peaks | Minimum Peak Height | Peak Threshold | Aperiodic Mode | Frequency Range (Hz) |
+|-------------|-------------------|----------------------|----------------------|----------------|----------------|-----------------------|
+| Periodic    | [1, 12]           | 1                    | 0.01                 | 1              | `fixed`        | [0.01, 15]            |
+| Aperiodic   | [1, 12]           | 5                    | 0.01                 | 1              | `fixed`        | [2, 45]               |
+
+---
+
+### Flat-Spectrum Analysis
+
+In the flat-spectrum analysis, the spectral plateau was identified starting from **20 Hz**.  
+When estimating the aperiodic component, we considered two modeling ranges:
+
+1. **Full range modeling:** [2, 45] Hz  
+2. **Truncated range modeling:** [2, *f_flat*] Hz, where *f_flat* is the onset of the flat-spectrum region  
 
 ## Expansion
 - **`calculate_average_psd.py`**  
