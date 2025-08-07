@@ -34,6 +34,23 @@ Note that the parameters should be adjusted according to your specific dataset. 
 
 
 ## Expansion
+- **`calculate_average_psd.py`**  
+  Computes the average and variance of Power Spectral Density (PSD) across all subjects in each group (AD or CN), separately for each EEG channel.
+
+- **`FOOOF.ipynb`**  
+  Performs spectral decomposition using the FOOOF algorithm. Evaluates model fitting using R² and MAE metrics for periodic components.
+
+- **`plot_error_r2.py`, `plot_r2_mae.py`, `plot_mae_r2.py`**  
+  Generate different visualizations to evaluate the accuracy of spectral estimation. See the code or contact the authors for further details.
+
+- **`plot_topo.py`**  
+  Plots topographic maps of aperiodic components with and without flat-spectrum estimation, highlighting the effect of preprocessing on spectral accuracy.
+
+- **`classify.py`**  
+  Loads `.csv` files and applies basic machine learning models to classify subjects as AD or CN.
+
+- **`plot_all_roc.py`**  
+  Draws ROC curves for classification results across different FOOOF-based spectral estimation settings.
 
 ## Contributors
 Quang-Duy Tran (quangduytran812@gmail.com), Nguyen Linh Trung  (linhtrung@vnu.edu.vn), Le Quoc Anh (lqanh@vnu.edu.vn), Signals and Systems Laboratory, FET-UET-VNU.
